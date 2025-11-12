@@ -17,19 +17,17 @@ const testimonialsData = [
 
 const Testimonials: React.FC = () => {
   return (
-    <section className="testimonials" id="testimonials">
-      <div className="container">
-        <h2 className="section-title">What My Clients Say</h2>
-        <div className="testimonials-grid">
-          {testimonialsData.map((testimonial, index) => (
-            <div key={index} className="testimonial-card">
-              <p className="testimonial-quote">"{testimonial.quote}"</p>
-              <p className="testimonial-author">- {testimonial.author}</p>
-            </div>
-          ))}
-        </div>
+    <>
+      <h2 className="section-title">What My Clients Say</h2>
+      <div className="testimonials-grid">
+        {testimonialsData.map((testimonial, index) => (
+          <div key={index} className="testimonial-card">
+            <p className="testimonial-quote">"{testimonial.quote}"</p>
+            <p className="testimonial-author">- {testimonial.author}</p>
+          </div>
+        ))}
       </div>
-    </section>
+    </>
   );
 };
 

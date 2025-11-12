@@ -1,19 +1,11 @@
 import React from 'react';
-import { FaInstagram } from 'react-icons/fa';
 
 const Footer: React.FC = () => {
   return (
     <footer className="footer">
-      <div className="container">
-        <div className="social-links">
-          <a href="https://www.instagram.com/batari.wulan" target="_blank" rel="noopener noreferrer">
-            <FaInstagram />
-          </a>
-        </div>
-        <p className="copyright">
-          &copy; {new Date().getFullYear()} Batari Wulan. All Rights Reserved.
-        </p>
-      </div>
+      <p className="copyright">
+        &copy; {new Date().getFullYear()} Batari Wulan. All Rights Reserved.
+      </p>
     </footer>
   );
 };
