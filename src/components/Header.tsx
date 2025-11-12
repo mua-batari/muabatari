@@ -4,7 +4,6 @@ import { FaHome, FaImages, FaConciergeBell, FaUser, FaEnvelope, FaHeart } from '
 const navLinks = [
   { href: '#home', label: 'Home', icon: <FaHome /> },
   { href: '#portfolio', label: 'Portfolio', icon: <FaImages /> },
-  { href: '#services', label: 'Services', icon: <FaConciergeBell /> },
   { href: '#about', label: 'About', icon: <FaUser /> },
   { href: '#contact', label: 'Contact', icon: <FaEnvelope /> },
 ];
@@ -39,7 +38,7 @@ const Header: React.FC = () => {
     <header className="header">
       <div className="container">
         <a href="#home" className="logo">
-          <span>Batar Wulan</span>
+          <span>Batari Wulan</span>
           <FaHeart className="logo-heart" />
         </a>
         <nav className="main-nav">
