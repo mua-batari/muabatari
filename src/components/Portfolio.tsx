@@ -7,7 +7,8 @@ import Portfolio5 from '../assets/images/portfolio-5.jpg';
 import Portfolio6 from '../assets/images/portfolio-6.jpg';
 import { FaRing, FaGraduationCap, FaUsers, FaUserTie, FaCut } from 'react-icons/fa';
 
-const portfolioItems = [
+// Data source for images
+const portfolioImages = [
   { id: 1, src: BatariImage, alt: 'Bridal Makeup' },
   { id: 2, src: Portfolio2, alt: 'Graduation Makeup' },
   { id: 3, src: Portfolio3, alt: 'Bridesmaid Makeup' },
@@ -16,6 +17,7 @@ const portfolioItems = [
   { id: 6, src: Portfolio6, alt: 'Special Occasion Makeup' },
 ];
 
+// Data source for services
 const servicesData = [
   {
     icon: <FaRing />,
@@ -44,30 +46,41 @@ const servicesData = [
   },
 ];
 
+// Combine data: group images under their corresponding service
+const workAndServices = servicesData.map(service => ({
+  ...service,
+  images: portfolioImages.filter(image => image.alt === service.title),
+}));
+
 const Portfolio: React.FC = () => {
   return (
     <section className="portfolio" id="portfolio">
       <div className="container">
         <h2 className="section-title">My Work & Services</h2>
-        <div className="portfolio-grid">
-          {portfolioItems.map((item) => (
-            <div key={item.id} className="portfolio-item">
-              <img src={item.src} alt={item.alt} />
-              <div className="portfolio-overlay">
-                <p>View Project</p>
-              </div>
-            </div>
-          ))}
-        </div>
-        <div className="services-grid" style={{ marginTop: '4rem' }}>
-          {servicesData.map((service, index) => (
-            <div key={index} className="service-card">
+        {workAndServices.map((service, index) => (
+          <div key={index} className="service-group" style={{ marginBottom: '4rem' }}>
+            {/* Service Details */}
+            <div className="service-card">
               <div className="service-icon">{service.icon}</div>
               <h3 className="service-title">{service.title}</h3>
               <p className="service-description">{service.description}</p>
             </div>
-          ))}
-        </div>
+
+            {/* Associated Images Grid */}
+            {service.images.length > 0 && (
+              <div className="portfolio-grid" style={{ marginTop: '1.5rem' }}>
+                {service.images.map((item) => (
+                  <div key={item.id} className="portfolio-item">
+                    <img src={item.src} alt={item.alt} />
+                    <div className="portfolio-overlay">
+                      <p>View Project</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            )}
+          </div>
+        ))}
       </div>
     </section>
   );
