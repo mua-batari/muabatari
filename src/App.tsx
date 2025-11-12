@@ -8,6 +8,8 @@ import Testimonials from './components/Testimonials';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 
+// Minor update to trigger Vercel redeploy
+
 function App() {
   return (
     <div className="App">
