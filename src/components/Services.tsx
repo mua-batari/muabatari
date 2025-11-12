@@ -1,21 +1,31 @@
 import React from 'react';
-import { FaHeart, FaStar, FaCamera } from 'react-icons/fa';
+import { FaRing, FaGraduationCap, FaUsers, FaUserTie, FaCut } from 'react-icons/fa';
 
 const servicesData = [
   {
-    icon: <FaHeart />,
+    icon: <FaRing />,
     title: 'Bridal Makeup',
-    description: 'Complete bridal makeup services to make your special day unforgettable.',
+    description: 'Flawless makeup for your special wedding day.',
   },
   {
-    icon: <FaStar />,
-    title: 'Special Occasion',
-    description: 'Makeup for parties, proms, and other special events.',
+    icon: <FaGraduationCap />,
+    title: 'Graduation Makeup',
+    description: 'Achieve a radiant look for your graduation ceremony.',
   },
   {
-    icon: <FaCamera />,
-    title: 'Editorial & Photoshoot',
-    description: 'Professional makeup for photoshoots, fashion shows, and editorials.',
+    icon: <FaUsers />,
+    title: 'Bridesmaid Makeup',
+    description: 'Coordinated and beautiful makeup for the bridal party.',
+  },
+  {
+    icon: <FaUserTie />,
+    title: 'Makeup Mature',
+    description: 'Enhancing beauty with techniques tailored for mature skin.',
+  },
+  {
+    icon: <FaCut />,
+    title: 'Hairdo',
+    description: 'Professional hairstyling for any event or occasion.',
   },
 ];
 

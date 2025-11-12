@@ -7,12 +7,12 @@ import Portfolio5 from '../assets/images/portfolio-5.jpg';
 import Portfolio6 from '../assets/images/portfolio-6.jpg';
 
 const portfolioItems = [
-  { id: 1, src: BatariImage, alt: 'Makeup artistry example - Batari' },
-  { id: 2, src: Portfolio2, alt: 'Makeup artistry example 2' },
-  { id: 3, src: Portfolio3, alt: 'Makeup artistry example 3' },
-  { id: 4, src: Portfolio4, alt: 'Makeup artistry example 4' },
-  { id: 5, src: Portfolio5, alt: 'Makeup artistry example 5' },
-  { id: 6, src: Portfolio6, alt: 'Makeup artistry example 6' },
+  { id: 1, src: BatariImage, alt: 'Bridal Makeup' },
+  { id: 2, src: Portfolio2, alt: 'Graduation Makeup' },
+  { id: 3, src: Portfolio3, alt: 'Bridesmaid Makeup' },
+  { id: 4, src: Portfolio4, alt: 'Makeup Mature' },
+  { id: 5, src: Portfolio5, alt: 'Hairdo' },
+  { id: 6, src: Portfolio6, alt: 'Special Occasion Makeup' },
 ];
 
 const Portfolio: React.FC = () => {

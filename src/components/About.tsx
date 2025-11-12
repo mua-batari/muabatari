@@ -1,5 +1,5 @@
 import React from 'react';
-import MuaPhoto from '../assets/images/mua-photo.jpg';
+import BatariImage from '../assets/images/batari.png';
 
 const About: React.FC = () => {
   return (
@@ -7,7 +7,7 @@ const About: React.FC = () => {
       <div className="container">
         <div className="about-content">
           <div className="about-image">
-            <img src={MuaPhoto} alt="The Make-Up Artist" />
+            <img src={BatariImage} alt="Batari Wulan - The Make-Up Artist" />
           </div>
           <div className="about-text">
             <h2 className="section-title">About Me</h2>

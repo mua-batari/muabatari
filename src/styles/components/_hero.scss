@@ -3,13 +3,11 @@
 .hero {
   position: relative;
   height: 100vh;
-  background-size: cover;
-  background-position: center;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  color: $background;
+  color: $background; // Text color for the hero section
 
   .hero-overlay {
     position: absolute;
@@ -17,7 +15,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba($text, 0.5); // Dark overlay for text readability
+    background-color: rgba($text, 0.3); // Lighter overlay for better visibility of image
   }
 
   .container {
@@ -26,10 +24,38 @@
   }
 
   .hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
     h1 {
-      font-size: 4rem;
-      margin-bottom: 1rem;
+      font-size: 3rem; // Slightly smaller for "Makeup by"
+      margin-bottom: 0.5rem;
       color: $background;
+    }
+    h2 {
+      font-size: 4.5rem; // Larger for "BATARI WULAN"
+      font-family: $font-primary;
+      color: $primary; // Use primary color for emphasis
+      margin-bottom: 2rem;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    }
+
+    .hero-image {
+      width: 250px;
+      height: 250px;
+      object-fit: cover;
+      border-radius: 50%; // Circular image
+      border: 5px solid $background;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+      margin-bottom: 2rem;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+      &:hover {
+        transform: scale(1.05);
+        box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+      }
     }
 
     p {
@@ -53,7 +79,7 @@
         &:hover {
           background-color: $primary;
           border-color: $primary;
-          color: $text;
+          color: $dark-text; // Use dark text for contrast on light primary button
           transform: translateY(-2px);
         }
       }
@@ -64,7 +90,14 @@
   @media (max-width: 768px) {
     .hero-content {
       h1 {
-        font-size: 2.5rem;
+        font-size: 2rem;
+      }
+      h2 {
+        font-size: 3rem;
+      }
+      .hero-image {
+        width: 180px;
+        height: 180px;
       }
       p {
         font-size: 1rem;
