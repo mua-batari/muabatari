@@ -1,0 +1,145 @@
+@import '../variables';
+
+// Keyframes and base styles that are not media-specific
+@keyframes pulse-heart {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+}
+
+.header {
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  transition: background-color 0.3s ease; // Smooth transition for style changes
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo {
+    font-family: $font-primary;
+    font-size: 1.5rem;
+    color: $text;
+    text-decoration: none;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    .logo-heart {
+      color: $primary;
+      font-size: 1.2rem;
+      animation: pulse-heart 2s ease-in-out infinite;
+    }
+  }
+}
+
+// --- DESKTOP STYLES ---
+@media (min-width: 769px) {
+  .header {
+    // Glassmorphism styles for the DESKTOP header
+    background: $glass-bg;
+    backdrop-filter: blur($glass-blur);
+    -webkit-backdrop-filter: blur($glass-blur);
+    border-bottom: 1px solid $glass-border;
+  }
+
+  .main-nav {
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      gap: 2rem;
+
+      li a {
+        font-family: $font-secondary;
+        font-size: 1rem;
+        color: $text;
+        text-decoration: none;
+        transition: color 0.3s ease, border-bottom-color 0.3s ease;
+        padding-bottom: 5px;
+        border-bottom: 2px solid transparent;
+
+        .nav-icon {
+          display: none; // Hide icons on desktop
+        }
+
+        &:hover, &.active {
+          color: $text;
+          border-bottom-color: $primary;
+        }
+      }
+    }
+  }
+}
+
+// --- MOBILE STYLES ---
+@media (max-width: 768px) {
+  .header {
+    // On mobile, the top bar is transparent, just holding the logo
+    background: transparent;
+    border-bottom: none;
+    
+    .container {
+      justify-content: center;
+    }
+    // The logo span is now visible
+  }
+
+  .main-nav {
+    // This becomes the fixed bottom bar
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1001;
+    
+    // Glassmorphism is applied HERE, not on the header
+    background: $bottom-nav-bg;
+    backdrop-filter: blur($glass-blur);
+    -webkit-backdrop-filter: blur($glass-blur);
+    border-top: 1px solid $glass-border;
+    box-shadow: 0 -5px 15px rgba(0,0,0,0.1);
+    
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0.5rem 0;
+      display: flex;
+      justify-content: space-around;
+      width: 100%;
+      
+      li a {
+        padding: 0.5rem;
+        font-size: 1.2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.25rem;
+        color: $text;
+        text-decoration: none;
+        border-bottom: none;
+
+        .nav-text {
+          display: none;
+        }
+        .nav-icon {
+          display: block;
+        }
+
+        &.active {
+          color: $primary;
+          transform: scale(1.1);
+        }
+        &:hover {
+          color: lighten($primary, 10%);
+        }
+      }
+    }
+  }
+}

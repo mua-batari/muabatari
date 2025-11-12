@@ -1,0 +1,15 @@
+// === COLORS ===
+$background: #C08081; // Main peach background
+$text: #FFFFFF; // White text for contrast
+$primary: #EAB3A3; // Lighter peach for accents/hovers
+$dark-text: #413F3D; // For use on light backgrounds if any
+
+// === GLASSMORPHISM ===
+$glass-bg: rgba(255, 255, 255, 0.15);
+$glass-blur: 10px;
+$glass-border: rgba(255, 255, 255, 0.2);
+$bottom-nav-bg: rgba(darken($background, 8%), 0.85);
+
+// === FONTS ===
+$font-primary: 'Playfair Display', serif; // Elegant, for headings
+$font-secondary: 'Lato', sans-serif; // Clean, for body text

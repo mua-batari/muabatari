@@ -1,0 +1,38 @@
+import React from 'react';
+import Portfolio1 from '../assets/images/portfolio-1.jpg';
+import Portfolio2 from '../assets/images/portfolio-2.jpg';
+import Portfolio3 from '../assets/images/portfolio-3.jpg';
+import Portfolio4 from '../assets/images/portfolio-4.jpg';
+import Portfolio5 from '../assets/images/portfolio-5.jpg';
+import Portfolio6 from '../assets/images/portfolio-6.jpg';
+
+const portfolioItems = [
+  { id: 1, src: Portfolio1, alt: 'Makeup artistry example 1' },
+  { id: 2, src: Portfolio2, alt: 'Makeup artistry example 2' },
+  { id: 3, src: Portfolio3, alt: 'Makeup artistry example 3' },
+  { id: 4, src: Portfolio4, alt: 'Makeup artistry example 4' },
+  { id: 5, src: Portfolio5, alt: 'Makeup artistry example 5' },
+  { id: 6, src: Portfolio6, alt: 'Makeup artistry example 6' },
+];
+
+const Portfolio: React.FC = () => {
+  return (
+    <section className="portfolio" id="portfolio">
+      <div className="container">
+        <h2 className="section-title">My Work</h2>
+        <div className="portfolio-grid">
+          {portfolioItems.map((item) => (
+            <div key={item.id} className="portfolio-item">
+              <img src={item.src} alt={item.alt} />
+              <div className="portfolio-overlay">
+                <p>View Project</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Portfolio;

@@ -1,0 +1,111 @@
+@import '../variables';
+
+.contact {
+  padding: 4rem 0;
+
+  .section-title {
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 2.5rem;
+  }
+
+  .contact-content {
+    // Applying glassmorphism to the content area
+    background: $glass-bg;
+    backdrop-filter: blur($glass-blur);
+    -webkit-backdrop-filter: blur($glass-blur);
+    border: 1px solid $glass-border;
+    padding: 3rem;
+    border-radius: 12px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+  }
+
+  .contact-info {
+    h3 {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+      color: $text; // White
+    }
+    p {
+      font-size: 1.1rem;
+      margin-bottom: 1.5rem;
+      color: $text; // White
+      opacity: 0.9;
+    }
+    ul {
+      list-style: none;
+      li {
+        font-size: 1.1rem;
+        margin-bottom: 0.5rem;
+        color: $text; // White
+        opacity: 0.9;
+        a {
+          color: $primary; // Light peach for links
+          text-decoration: none;
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+
+  .contact-form {
+    .form-group {
+      margin-bottom: 1.5rem;
+
+      label {
+        display: block;
+        margin-bottom: 0.5rem;
+        font-weight: bold;
+        color: $text; // White
+        opacity: 0.9;
+      }
+
+      input,
+      textarea {
+        width: 100%;
+        padding: 0.75rem;
+        border: 1px solid $glass-border;
+        background-color: rgba(255, 255, 255, 0.1);
+        border-radius: 5px;
+        font-size: 1rem;
+        color: $text; // White
+        &::placeholder {
+          color: rgba(255, 255, 255, 0.6);
+        }
+      }
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 0.75rem 1.5rem;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+      border: none;
+      cursor: pointer;
+
+      &.btn-primary {
+        background-color: $primary; // Light Peach
+        color: $dark-text; // Dark text for contrast on light peach button
+
+        &:hover {
+          background-color: lighten($primary, 10%);
+          transform: translateY(-2px);
+        }
+      }
+    }
+  }
+
+  // --- Mobile Styles ---
+  @media (max-width: 992px) {
+    .contact-content {
+      grid-template-columns: 1fr;
+    }
+  }
+}

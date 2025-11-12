@@ -1,0 +1,34 @@
+@import '../variables';
+
+.footer {
+  // Glassmorphism for the footer
+  background: $glass-bg;
+  backdrop-filter: blur($glass-blur);
+  -webkit-backdrop-filter: blur($glass-blur);
+  border-top: 1px solid $glass-border;
+
+  padding: 2rem 0;
+  text-align: center;
+  margin-top: 4rem;
+
+  .social-links {
+    margin-bottom: 1rem;
+
+    a {
+      color: $text; // White
+      font-size: 1.5rem;
+      margin: 0 0.75rem;
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: $primary; // Light Peach
+      }
+    }
+  }
+
+  .copyright {
+    font-size: 0.9rem;
+    color: $text; // White
+    opacity: 0.8;
+  }
+}

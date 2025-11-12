@@ -1,0 +1,53 @@
+@import '../variables';
+
+.services {
+  padding: 4rem 0;
+
+  .section-title {
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 2.5rem;
+  }
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+  }
+
+  .service-card {
+    // Glassmorphism styles
+    background: $glass-bg;
+    backdrop-filter: blur($glass-blur);
+    -webkit-backdrop-filter: blur($glass-blur);
+    border: 1px solid $glass-border;
+    
+    padding: 2rem;
+    border-radius: 12px;
+    text-align: center;
+    transition: transform 0.3s ease;
+
+    .service-icon {
+      font-size: 3rem;
+      color: $primary;
+      margin-bottom: 1rem;
+    }
+
+    .service-title {
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+      color: $text; // White
+    }
+
+    .service-description {
+      font-size: 1rem;
+      color: $text; // White
+      opacity: 0.9;
+    }
+
+    &:hover {
+      transform: translateY(-10px);
+      border-color: lighten($glass-border, 20%);
+    }
+  }
+}
