@@ -1,9 +1,9 @@
 import React from 'react';
-import HeroBg from '../assets/images/hero-bg.jpg';
+import BatariImage from '../assets/images/batari.png';
 
 const Hero: React.FC = () => {
   return (
-    <section className="hero" id="home" style={{ backgroundImage: `url(${HeroBg})` }}>
+    <section className="hero" id="home" style={{ backgroundImage: `url(${BatariImage})` }}>
       <div className="hero-overlay"></div>
       <div className="container">
         <div className="hero-content">

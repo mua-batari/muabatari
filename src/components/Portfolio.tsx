@@ -1,5 +1,5 @@
 import React from 'react';
-import Portfolio1 from '../assets/images/portfolio-1.jpg';
+import BatariImage from '../assets/images/batari.png';
 import Portfolio2 from '../assets/images/portfolio-2.jpg';
 import Portfolio3 from '../assets/images/portfolio-3.jpg';
 import Portfolio4 from '../assets/images/portfolio-4.jpg';
@@ -7,7 +7,7 @@ import Portfolio5 from '../assets/images/portfolio-5.jpg';
 import Portfolio6 from '../assets/images/portfolio-6.jpg';
 
 const portfolioItems = [
-  { id: 1, src: Portfolio1, alt: 'Makeup artistry example 1' },
+  { id: 1, src: BatariImage, alt: 'Makeup artistry example - Batari' },
   { id: 2, src: Portfolio2, alt: 'Makeup artistry example 2' },
   { id: 3, src: Portfolio3, alt: 'Makeup artistry example 3' },
   { id: 4, src: Portfolio4, alt: 'Makeup artistry example 4' },
