@@ -6,7 +6,7 @@ const TopBar: React.FC = () => {
     <header className="top-bar">
       <div className="container">
         <a href="#home" className="logo">
-          <span>Batar Wulan</span>
+          <span>Batari Wulan</span>
           <FaHeart className="logo-heart" />
         </a>
       </div>
