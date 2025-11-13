@@ -5,6 +5,7 @@ import About from './components/About';
 import Testimonials from './components/Testimonials';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import MobileNav from './components/MobileNav';
 import { FaInstagram } from 'react-icons/fa';
 const navLinks = [
   { href: '#portfolio', label: 'Portfolio' },
