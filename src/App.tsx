@@ -5,10 +5,7 @@ import About from './components/About';
 import Testimonials from './components/Testimonials';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
-import MobileNav from './components/MobileNav'; // Import the new component
-import { FaInstagram, FaHeart } from 'react-icons/fa';
-
-// Navigation data now lives here, to be used in the left column
+import { FaInstagram } from 'react-icons/fa';
 const navLinks = [
   { href: '#portfolio', label: 'Portfolio' },
   { href: '#about', label: 'About Me' },
